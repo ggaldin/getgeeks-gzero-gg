@@ -1,0 +1,13 @@
+./run.sh
+(tudo)
+
+ou
+
+robot -d ./logs tests
+
+
+ou
+
+robot -d ./logs tests/Geeks.robot
+
+onde Geeks.robot é o nome do arquivo de teste
