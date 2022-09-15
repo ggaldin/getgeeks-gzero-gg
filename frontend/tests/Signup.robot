@@ -4,12 +4,13 @@ Documentation       Signup Teste Suite
 Resource            ${EXECDIR}/resources/Base.robot
 
 Test Setup          Start Session
-Test Teardown       Finish Session
+Test Teardown       After Test
 
 *Test Cases*
 Register a new user
-
-    ${user}     Factory User
+    [Tags]      smoke
+    
+    ${user}     Factory User    faker
 
     #Set Suite Variable      ${user}
 
@@ -22,7 +23,7 @@ Duplicate user
     [Tags]      attempt_signup
     #[Tags]      dup_email
 
-    ${user}                   Factory User
+    ${user}                   Factory User  faker
     Add User From Database    ${user}
     #Add User    ${user}
 
@@ -34,7 +35,7 @@ Duplicate user
 Wrong Email
     [Tags]      attempt_signup
 
-    ${user}     Factory Wrong Email
+    ${user}     Factory User    wrong_email
 
     Go to Signup Form 
     Fill Signup Form  ${user} 
