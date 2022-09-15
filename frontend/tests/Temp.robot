@@ -22,6 +22,6 @@ Trabalhando com Listas
 
     END
 
-    @{avengers2}    Create List      Tony Sterco     Miss Marvel     Steve Rogers        Bruce Biba      Scott Lang
+    @{avengers2}    Create List      Tony Sterco     Kamalalhan     Steve Rogers        Bruce Biba      Scott Lang
 
     Lists Should Be Equal       ${avengers}     ${avengers2}
